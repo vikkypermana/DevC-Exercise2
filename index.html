@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Exercise 2</title>
+    <title>Exercise 2</title>    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <center>
         <h1>Kalkulator</h1>
+        <hr>
+        <br>
+        <table>
+            <tr>
+                <td colspan="4"><input type="text" readonly id="hasil" name="hasil"></td>
+            </tr>
+            <tr>
+                <td><button onclick="document.getElementById('hasil').value+=7" class="angka">7</button></td>
+                <td><button onclick="document.getElementById('hasil').value+=8" class="angka">8</button></td>
+                <td><button onclick="document.getElementById('hasil').value+=9" class="angka">9</button></td>
+                <td><button onclick="document.getElementById('hasil').value+='+';" class="operator">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="document.getElementById('hasil').value+=4" class="angka">4</button></td>
+                <td><button onclick="document.getElementById('hasil').value+=5" class="angka">5</button></td>
+                <td><button onclick="document.getElementById('hasil').value+=6" class="angka">6</button></td>
+                <td><button onclick="document.getElementById('hasil').value+='-'" class="operator">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="document.getElementById('hasil').value+=1" class="angka">1</button></td>
+                <td><button onclick="document.getElementById('hasil').value+=2" class="angka">2</button></td>
+                <td><button onclick="document.getElementById('hasil').value+=3" class="angka">3</button></td>
+                <td><button onclick="document.getElementById('hasil').value+='*'" class="operator">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="document.getElementById('hasil').value=''" class="operator">c</button></td>
+                <td><button onclick="document.getElementById('hasil').value+=0" class="angka">0</button></td>
+                <td><button onclick="document.getElementById('hasil').value+='=' + eval(document.getElementById('hasil').value);" class="operator">=</button></td>
+                <td><button onclick="document.getElementById('hasil').value+='/'" class="operator">/</button></td>
+            </tr>
+        </table>  
+                
     </center>
+    <footer class="footer">
+        <small>created &copy;2019 by Vikky Permana for DevC - Batch 25</small>
+    </footer>    
 </body>
 </html>
